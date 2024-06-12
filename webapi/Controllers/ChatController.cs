@@ -240,7 +240,7 @@ public class ChatController : ControllerBase, IDisposable
         BearerAuthenticationProvider authenticationProvider = new(() => Task.FromResult(GithubAuthHeader));
         await kernel.ImportPluginFromOpenApiAsync(
             pluginName: "GitHubPlugin",
-            filePath: GetPluginFullPath("GitHubPlugin/openapi.json"),
+            filePath: GetPluginFullPath("OpenApi/GitHubPlugin/openapi.json"),
             new OpenApiFunctionExecutionParameters
             {
                 AuthCallback = authenticationProvider.AuthenticateRequestAsync,
